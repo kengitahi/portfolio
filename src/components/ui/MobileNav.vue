@@ -6,10 +6,17 @@ import CloseIcon from '../icons/CloseIcon.vue'
 
 import { ref, defineEmits } from 'vue'
 const isMenuOpen = ref(false)
+const bodyEl = document.body
+
 const emit = defineEmits(['blurMain'])
 const toggleMenu = function () {
   isMenuOpen.value = !isMenuOpen.value
   emit('blurMain', isMenuOpen.value)
+  if (bodyEl.classList.contains('fixed')) {
+    bodyEl.classList.remove('fixed')
+  } else {
+    bodyEl.classList.add('fixed')
+  }
 }
 </script>
 

@@ -3,6 +3,12 @@
 @import 'tailwindcss';
 @import './base.css';
 
+@theme {
+  --color-primary: #ffaf29;
+
+  --color-gray: #484848;
+  --color-charcoal: #0f0f0f;
+}
 :root {
   --my-blur: 2px;
 }
@@ -10,6 +16,7 @@
 body {
   font-family: 'Outfit', sans-serif;
   min-height: 100vh;
+  width: 100vw;
 }
 
 #app {
@@ -21,11 +28,4 @@ body {
 
 .mobile-menu {
   max-width: 1280px;
-}
-
-@theme {
-  --color-primary: #ffaf29;
-
-  --color-gray: #484848;
-  --color-charcoal: #0f0f0f;
 }

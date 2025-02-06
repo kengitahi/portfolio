@@ -1,0 +1,10 @@
+<script setup>
+import PrimaryBtn from '../buttons/PrimaryBtn.vue'
+</script>
+
+<template>
+  <div class="flex items-center gap-4 flex-col md:flex-row">
+    <PrimaryBtn />
+    <PrimaryBtn />
+  </div>
+</template>
