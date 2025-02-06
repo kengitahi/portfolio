@@ -11,7 +11,7 @@ import NavLink from '../links/NavLink.vue'
       <img :src="MobileLogo" alt="Mobile Logo" class="block md:hidden max-w-[48px]" />
     </div>
     <div class="main-nav">
-      <ul class="flex items-center gap-4">
+      <ul class="hidden md:flex items-center gap-4">
         <li>
           <NavLink anchor="Home" link="/" />
         </li>

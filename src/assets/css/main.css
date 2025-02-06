@@ -3,8 +3,13 @@
 @import 'tailwindcss';
 @import './base.css';
 
+:root {
+  --my-blur: 2px;
+}
+
 body {
   font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
 }
 
 #app {
@@ -12,6 +17,10 @@ body {
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+}
+
+.mobile-menu {
+  max-width: 1280px;
 }
 
 @theme {
