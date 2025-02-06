@@ -4,9 +4,10 @@
 @import './base.css';
 
 @theme {
-  --color-primary: #ffaf29;
+  --color-primary: #f7b138;
 
   --color-gray: #484848;
+  --color-slate: #1a1a1a;
   --color-charcoal: #0f0f0f;
 }
 :root {

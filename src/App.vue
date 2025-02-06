@@ -1,8 +1,10 @@
 <script setup>
-import HomeHero from './components/sections/HomeHero.vue'
 import MainNav from './components/ui/MainNav.vue'
 import MobileNav from './components/ui/MobileNav.vue'
+
+import HomeHero from './components/sections/HomeHero.vue'
 import HomeServices from './components/sections/HomeServices.vue'
+import HomeExpertise from './components/sections/HomeExpertise.vue'
 
 import { ref } from 'vue'
 const isMenuOpen = ref(false)
@@ -21,6 +23,7 @@ const isMenuOpen = ref(false)
   <main :class="{ 'blur-[4px]': isMenuOpen }" class="flex flex-col">
     <HomeHero />
     <HomeServices />
+    <HomeExpertise />
   </main>
 </template>
 

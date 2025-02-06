@@ -1,7 +1,7 @@
 <script setup>
 import HeroHeading from '../typography/HeroHeading.vue'
 import HeroDescription from '../typography/HeroDescription.vue'
-import HeroButtons from '../sections/HeroButtons.vue'
+import HeroButtons from '../ui/HeroButtons.vue'
 </script>
 
 <template>
