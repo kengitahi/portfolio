@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import 'tailwindcss';
 @import './base.css';
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+}
+
+@theme {
+  --color-primary: #ffaf29;
+
+  --color-gray: #484848;
+  --color-charcoal: #0f0f0f;
 }

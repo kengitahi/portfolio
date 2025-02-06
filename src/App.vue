@@ -1,16 +1,11 @@
 <script setup>
+import MainNav from './components/ui/MainNav.vue'
 </script>
 
 <template>
-  <header>
-    Logo Here
-  </header>
+  <MainNav />
 
-  <main>
-    Page Contents
-  </main>
+  <main>Page Contents</main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
