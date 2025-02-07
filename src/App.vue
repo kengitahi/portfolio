@@ -6,6 +6,7 @@ import HomeHero from './components/sections/HomeHero.vue'
 import HomeServices from './components/sections/HomeServices.vue'
 import HomeExpertise from './components/sections/HomeExpertise.vue'
 import PortfolioGrid from './components/sections/PortfolioGrid.vue'
+import AboutSection from './components/sections/AboutSection.vue'
 
 import { ref } from 'vue'
 const isMenuOpen = ref(false)
@@ -26,6 +27,7 @@ const isMenuOpen = ref(false)
     <HomeServices />
     <HomeExpertise />
     <PortfolioGrid />
+    <AboutSection />
   </main>
 </template>
 

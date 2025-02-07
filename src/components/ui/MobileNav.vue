@@ -33,7 +33,7 @@ const toggleMenu = function () {
       class="mobile-nav mt-12 absolute bg-white p-4 z-10 w-full right-0 shadow-lg border-t border-t-gray/10 rounded-bl-md rounded-br-md"
       v-if="isMenuOpen"
     >
-      <ul class="flex items-center gap-4 flex-col">
+      <ul class="flex items-center gap-6 flex-col">
         <li>
           <NavLink anchor="Home" link="/" />
         </li>
