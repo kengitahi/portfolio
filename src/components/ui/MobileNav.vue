@@ -4,7 +4,7 @@ import NavLink from '../links/NavLink.vue'
 import MenuIcon from '../icons/MenuIcon.vue'
 import CloseIcon from '../icons/CloseIcon.vue'
 
-import { ref, defineEmits } from 'vue'
+import { ref } from 'vue'
 const isMenuOpen = ref(false)
 const bodyEl = document.body
 
