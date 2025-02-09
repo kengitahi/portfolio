@@ -1,5 +1,5 @@
 export const formOptions = [
-  { value: 'quote', label: 'Get a Quote' },
-  { value: 'question', label: 'Question or General Enquiry' },
-  { value: 'other', label: 'Other' },
+  { value: 'Get a Quote', label: 'Get a Quote' },
+  { value: 'Question or General Enquiry', label: 'Question or General Enquiry' },
+  { value: 'Other', label: 'Other' },
 ]
