@@ -10,5 +10,5 @@
 
 <script setup>
 import SectionTitle from '../typography/SectionTitle.vue'
-import AboutSubTitle from '../ui/AboutSubtitle.vue'
+import AboutSubTitle from '../typography/AboutSubtitle.vue'
 </script>

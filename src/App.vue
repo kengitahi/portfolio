@@ -7,8 +7,10 @@ import HomeServices from './components/sections/HomeServices.vue'
 import HomeExpertise from './components/sections/HomeExpertise.vue'
 import PortfolioGrid from './components/sections/PortfolioGrid.vue'
 import AboutSection from './components/sections/AboutSection.vue'
+import FaqAccordion from './components/ui/FaqAccordion.vue'
 
 import { ref } from 'vue'
+import ContactSection from './components/sections/ContactSection.vue'
 const isMenuOpen = ref(false)
 </script>
 
@@ -28,6 +30,8 @@ const isMenuOpen = ref(false)
     <HomeExpertise />
     <PortfolioGrid />
     <AboutSection />
+    <FaqAccordion />
+    <ContactSection />
   </main>
 </template>
 
