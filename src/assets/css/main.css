@@ -14,6 +14,10 @@
   --my-blur: 2px;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   min-height: 100vh;

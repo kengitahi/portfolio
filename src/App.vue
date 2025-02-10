@@ -11,6 +11,7 @@ import FaqAccordion from './components/ui/FaqAccordion.vue'
 
 import { ref } from 'vue'
 import ContactSection from './components/sections/ContactSection.vue'
+import MainFooter from './components/sections/MainFooter.vue'
 const isMenuOpen = ref(false)
 </script>
 
@@ -26,12 +27,13 @@ const isMenuOpen = ref(false)
 
   <main :class="{ 'blur-[4px]': isMenuOpen }" class="flex flex-col">
     <HomeHero />
-    <HomeServices />
+    <HomeServices id="services" />
     <HomeExpertise />
-    <PortfolioGrid />
-    <AboutSection />
-    <FaqAccordion />
-    <ContactSection />
+    <PortfolioGrid id="projects" />
+    <AboutSection id="about" />
+    <FaqAccordion id="faq" />
+    <ContactSection id="contact" />
+    <MainFooter />
   </main>
 </template>
 

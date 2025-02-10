@@ -1,7 +1,7 @@
 <script>
 export default {
   props: {
-    expertise: {
+    text: {
       type: String,
       required: true,
     },
@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <p class="w-32 h-auto object-contain text-gray">
-    {{ expertise }}
-  </p>
+  <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray cursor-pointer">
+    {{ text }}
+  </h3>
 </template>

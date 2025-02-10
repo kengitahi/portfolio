@@ -38,19 +38,19 @@ const toggleMenu = function () {
           <NavLink anchor="Home" link="/" />
         </li>
         <li>
-          <NavLink anchor="Services" link="/services" />
+          <NavLink anchor="Services" link="#services" />
         </li>
         <li>
-          <NavLink anchor="Projects" link="/projects" />
+          <NavLink anchor="Projects" link="#projects" />
         </li>
         <li>
-          <NavLink anchor="About" link="/about" />
+          <NavLink anchor="About" link="#about" />
         </li>
         <li>
-          <NavLink anchor="FAQ" link="/faq" />
+          <NavLink anchor="FAQ" link="#faq" />
         </li>
         <li>
-          <NavLink anchor="Contact" link="/contact" />
+          <NavLink anchor="Contact" link="#contact" />
         </li>
       </ul>
     </div>
