@@ -12,20 +12,20 @@
         tabindex="0"
         @keydown.enter="openModal(project)"
       >
-        <div class="relative overflow-hidden rounded-lg shadow-lg">
+        <div class="relative overflow-hidden rounded-lg shadow-lg group">
           <img
-            :src="project.image"
+            :src="project.mainImage"
             :alt="project.title"
             class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
           />
-          <div
-            class="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-50"
+          <PrimaryBtn
+            :label="'View Details'"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 peer hover:cursor-pointer hidden group-hover:block transition-all duration-500 ease-in-out text-white font-semibold"
+            @click="openModal(project)"
           />
-          <h3
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl font-bold text-center"
-          >
-            {{ project.title }}
-          </h3>
+          <div
+            class="absolute inset-0 bg-black/10 transition-opacity duration-300 peer-hover:bg-black/80 hover:bg-black/80"
+          />
         </div>
       </div>
     </div>
@@ -58,7 +58,7 @@
               leave-from-class="opacity-100"
               leave-to-class="opacity-0"
             >
-              <div class="fixed inset-0 bg-black bg-opacity-50" />
+              <div class="fixed inset-0 bg-black/90 bg-opacity-50" />
             </TransitionChild>
 
             <!-- Modal Content -->
@@ -70,7 +70,7 @@
               <div class="p-6">
                 <!-- Header -->
                 <div class="flex justify-between items-start mb-4">
-                  <h2 :class="['text-2xl font-bold', titleClasses]">
+                  <h2 :class="['text-2xl font-bold capitalize', titleClasses]">
                     {{ selectedProject.title }}
                   </h2>
                   <button
@@ -90,43 +90,73 @@
                   </button>
                 </div>
 
-                <!-- Image with fade-in transition -->
-                <TransitionChild
-                  enter-active-class="transition-opacity duration-300"
-                  enter-from-class="opacity-0"
-                  enter-to-class="opacity-100"
-                >
+                <div class="grid grid-cols-2 gap-4">
                   <img
-                    :src="selectedProject.image"
+                    :src="selectedProject.modalImage"
                     :alt="selectedProject.title"
                     :class="['w-full h-64 object-cover rounded-lg', imageClasses]"
                   />
-                </TransitionChild>
 
-                <!-- Description -->
-                <p :class="['mt-4 text-gray-600', descriptionClasses]">
-                  {{ selectedProject.description }}
-                </p>
+                  <div>
+                    <!-- Description -->
+                    <p :class="[' text-gray-600', descriptionClasses]">
+                      {{ selectedProject.description }}
+                    </p>
+                    <p class="mt-4">
+                      <span class="font-bold text-lg">Technologies Used: </span>
+                      <span class="text-gray-500">{{ selectedProject.technologies }}</span>
+                    </p>
+                  </div>
+                </div>
 
-                <!-- GitHub Link -->
-                <a
-                  :href="selectedProject.githubUrl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  :class="[
-                    'inline-flex items-center mt-4 transition-colors',
-                    githubLinkClasses || 'text-blue-600 hover:text-blue-800',
-                  ]"
-                >
-                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      fill-rule="evenodd"
-                      d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  {{ githubLinkText || 'View on GitHub' }}
-                </a>
+                <div class="flex items-center gap-4 mt-4">
+                  <!-- GitHub Link -->
+                  <a
+                    v-if="selectedProject.githubLink"
+                    :href="selectedProject.githubLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    :class="[
+                      'inline-flex items-center cursor-pointer',
+                      githubLinkClasses ||
+                        'text-blue-500 border border-blue-500 hover:underline hover:text-gray hover:bg-primary px-6 py-2 rounded-sm hover:border-primary font-semibold tracking-wider transition-all duration-300 ease-in-out',
+                    ]"
+                  >
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    {{ githubLinkText || 'View on GitHub' }}
+                  </a>
+                  <PrimaryBtnLink
+                    v-if="selectedProject.liveUrl"
+                    :href="selectedProject.liveUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    :link="selectedProject.liveUrl"
+                    :anchor="liveUrlText || 'Visit Live Project'"
+                  >
+                    <template #icon>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </template>
+                  </PrimaryBtnLink>
+                </div>
               </div>
             </div>
           </div>
@@ -139,6 +169,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import { projects } from '../../data/projects'
+import PrimaryBtn from '../buttons/PrimaryBtn.vue'
+import PrimaryBtnLink from '../links/PrimaryBtnLink.vue'
 
 const props = defineProps({
   modalClasses: {
@@ -213,3 +245,9 @@ onUnmounted(() => {
   document.removeEventListener('keydown', handleKeyDown)
 })
 </script>
+
+<style scoped>
+.inner-title:hover {
+  text-decoration: underline;
+}
+</style>
