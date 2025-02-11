@@ -1,12 +1,12 @@
 <template>
-  <div class="grid md:grid-cols-2 gap-6 items-center">
+  <section class="py-15 grid md:grid-cols-2 gap-6 items-center">
     <div>image of me</div>
     <div>
       <SectionSubTitle subtitle="My Intro" />
       <SectionTitle title="About Me" class="mt-0" />
       <SectionDescription />
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

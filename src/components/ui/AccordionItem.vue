@@ -10,7 +10,7 @@
     >
       {{ question }}
     </div>
-    <div class="accordion-content px-4 text-md" :class="{ active: isActive }">
+    <div class="accordion-content p-4 text-md" :class="{ active: isActive }">
       {{ answer }}
     </div>
   </div>

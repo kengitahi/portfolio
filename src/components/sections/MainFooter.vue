@@ -10,8 +10,8 @@
     </div>
 
     <div class="gap-4 flex flex-col">
-      <div class="gap-2 grid">
-        <img :src="LetterLogo" alt="Letter Logo" class="max-w-[48px]" />
+      <div class="gap-2 flex">
+        <img :src="LetterLogo" alt="Letter Logo" class="max-w-[48px] h-auto" />
 
         <div>
           <p class="text-gray text-lg md:text-xl font-semibold mb-0 tracking-wide">

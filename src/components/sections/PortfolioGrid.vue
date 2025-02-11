@@ -98,7 +98,7 @@
                   </button>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid md:grid-cols-2 gap-4">
                   <img
                     :src="selectedProject.modalImage"
                     :alt="selectedProject.title"
