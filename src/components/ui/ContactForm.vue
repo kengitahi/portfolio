@@ -31,7 +31,11 @@
       />
     </div>
 
-    <PrimaryBtn label="Send Message" type="submit" />
+    <PrimaryBtn label="Send Message" type="submit" class="text-white">
+      <template #appendIcon>
+        <FontAwesomeIcon :icon="faPaperPlane" />
+      </template>
+    </PrimaryBtn>
   </form>
 </template>
 
@@ -44,6 +48,8 @@ import FormLabel from '@/components/forms/FormLabel.vue'
 import FormTextarea from '@/components/forms/FormTextarea.vue'
 import FormSelect from '@/components/forms/FormSelect.vue'
 import { ref } from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 const formData = ref({
   name: '',

@@ -4,7 +4,7 @@ import ExpertiseGrid from '../ui/ExpertiseGrid.vue'
 </script>
 
 <template>
-  <section>
+  <section class="py-15">
     <SectionTitle title="Expertise" />
     <ExpertiseGrid />
   </section>

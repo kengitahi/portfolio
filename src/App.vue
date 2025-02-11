@@ -12,6 +12,7 @@ import FaqAccordion from './components/ui/FaqAccordion.vue'
 import { ref } from 'vue'
 import ContactSection from './components/sections/ContactSection.vue'
 import MainFooter from './components/sections/MainFooter.vue'
+import BackToTop from './components/ui/BackToTop.vue'
 const isMenuOpen = ref(false)
 </script>
 
@@ -34,6 +35,7 @@ const isMenuOpen = ref(false)
     <FaqAccordion id="faq" />
     <ContactSection id="contact" />
     <MainFooter />
+    <BackToTop />
   </main>
 </template>
 

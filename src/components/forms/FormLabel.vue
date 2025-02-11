@@ -1,5 +1,7 @@
 <template>
-  <label class="text-gray text-md font-bold mb-0" :for="forId">{{ label }}</label>
+  <label class="text-gray text-lg md:text-xl font-semibold mb-0 tracking-wide" :for="forId">{{
+    label
+  }}</label>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
-  <footer class="grid md:grid-cols-2 gap-6">
+  <footer class="grid md:grid-cols-2 gap-6 py-15">
     <div class="gap-4 flex flex-col">
-      <SectionTitle title="Let's Work Together" />
+      <SectionTitle title="Let's Work Together" class="mb-0" />
       <div class="flex items-center gap-2">
         <SmallerSectionHeading text="Start By" />
         <LargeLink anchor="Saying Hi!" link="#contact" />
@@ -10,23 +10,29 @@
     </div>
 
     <div class="gap-4 flex flex-col">
-      <div>
+      <div class="gap-2 grid">
         <img :src="LetterLogo" alt="Letter Logo" class="max-w-[48px]" />
-        <p class="text-gray text-lg md:text-xl font-bold">Kennedy Gitahi</p>
-        <p class="text-gray text-md md:text-lg font-semibold">PHP Developer</p>
+
+        <div>
+          <p class="text-gray text-lg md:text-xl font-semibold mb-0 tracking-wide">
+            Kennedy Gitahi
+          </p>
+          <p class="text-gray text-md md:text-lg font-medium">PHP Developer</p>
+        </div>
       </div>
 
       <div>
-        <p class="text-gray text-md md:text-lg font-semibold">Email me</p>
+        <p class="text-gray text-md md:text-lg font-medium mb-0 tracking-wide">Email me:</p>
         <a
           href="mailto:kennedy.gitahi@proton.me"
-          class="text-gray text-lg md:text-xl font-bold hover:underline hover:text-primary"
+          class="text-gray text-lg md:text-xl font-semibold hover:underline hover:text-primary"
         >
           kennedy.gitahi@proton.me
         </a>
       </div>
 
       <div>
+        <p class="text-gray text-md md:text-lg font-medium mb-0 tracking-wide">Follow me:</p>
         <FooterIcons />
       </div>
     </div>

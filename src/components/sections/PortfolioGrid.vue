@@ -1,6 +1,8 @@
 <!-- Portfolio.vue -->
 <template>
-  <div class="container mx-auto px-4 py-8">
+  <section class="py-15">
+    <SectionTitle title="Portfolio" />
+    <SectionDescription />
     <!-- Portfolio Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
@@ -12,7 +14,7 @@
         tabindex="0"
         @keydown.enter="openModal(project)"
       >
-        <div class="relative overflow-hidden rounded-lg shadow-lg group">
+        <div class="relative overflow-hidden rounded-sm shadow-lg group">
           <img
             :src="project.mainImage"
             :alt="project.title"
@@ -27,6 +29,12 @@
             class="absolute inset-0 bg-black/10 transition-opacity duration-300 peer-hover:bg-black/80 hover:bg-black/80"
           />
         </div>
+        <p
+          class="mb-2 mt-4 text-center tracking-wide font-semibold text-lg md:text-xl text-gray capitalize hover:underline"
+          @click="openModal(project)"
+        >
+          {{ project.title }}
+        </p>
       </div>
     </div>
 
@@ -163,7 +171,7 @@
         </div>
       </Transition>
     </Teleport>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -171,6 +179,9 @@ import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import { projects } from '../../data/projects'
 import PrimaryBtn from '../buttons/PrimaryBtn.vue'
 import PrimaryBtnLink from '../links/PrimaryBtnLink.vue'
+import SectionTitle from '../typography/SectionTitle.vue'
+import SectionSubtitle from '../typography/SectionSubtitle.vue'
+import SectionDescription from '../typography/SectionDescription.vue'
 
 const props = defineProps({
   modalClasses: {

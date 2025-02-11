@@ -1,13 +1,16 @@
 <template>
-  <div class="accordion-item cursor-pointer mb-2 border border-gray/30 rounded-sm">
+  <div
+    class="accordion-item cursor-pointer mb-2 border-gray/30 rounded-sm border-[2px]"
+    :class="{ 'border-primary': isActive }"
+  >
     <div
-      class="accordion-header p-4 cursor-pointer relative flex items-center"
+      class="accordion-header p-4 cursor-pointer relative flex items-center text-gray text-lg md:text-xl font-semibold mb-0 tracking-wide"
       :class="{ active: isActive }"
       @click="$emit('toggle')"
     >
       {{ question }}
     </div>
-    <div class="accordion-content p-4" :class="{ active: isActive }">
+    <div class="accordion-content px-4 text-md" :class="{ active: isActive }">
       {{ answer }}
     </div>
   </div>
