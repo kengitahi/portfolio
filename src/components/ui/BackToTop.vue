@@ -9,7 +9,7 @@
   >
     <a
       href="/#app"
-      class="back-to-top gap-2 flex items-center justify-center flex-col bg-primary text-white w-fit p-4 rounded-sm fixed bottom-4 right-4 text-center z-50 cursor-pointer font-bold tracking-wide hover:underline"
+      class="back-to-top gap-2 flex items-center justify-center flex-col bg-primary text-ui w-fit p-4 rounded-sm fixed bottom-4 right-4 text-center z-50 cursor-pointer font-bold tracking-wide hover:underline"
       v-if="showBackToTop"
       @click="scrollToTop"
       ><FontAwesomeIcon :icon="faChevronUp" :height="48" />Back to top

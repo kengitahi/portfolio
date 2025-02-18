@@ -1,5 +1,5 @@
 <template>
-  <section class="py-15 grid md:grid-cols-2 gap-6 items-center">
+  <section class="pt-15 grid md:grid-cols-2 gap-6 items-center">
     <div>image of me</div>
     <div>
       <SectionSubTitle subtitle="My Intro" />

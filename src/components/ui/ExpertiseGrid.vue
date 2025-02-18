@@ -11,18 +11,10 @@ export default {
 <template>
   <section>
     <div class="grid grid-cols-[repeat(auto-fit,minmax(128px,1fr))] gap-8">
-      <div class="flex items-center justify-center">
-        <SectionText text="PHP" />
-      </div>
-      <div class="flex items-center justify-center">
-        <SectionText text="JavaScript" />
-      </div>
-      <div class="flex items-center justify-center">
-        <SectionText text="Vue" />
-      </div>
-      <div class="flex items-center justify-center">
-        <SectionText text="Laravel" />
-      </div>
+      <SectionText text="PHP" />
+      <SectionText text="JavaScript" />
+      <SectionText text="Vue" />
+      <SectionText text="Laravel" />
     </div>
   </section>
 </template>

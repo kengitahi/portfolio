@@ -7,7 +7,7 @@ import GlobeIcon from '../icons/GlobeIcon.vue'
     <p class="bg-primary w-fit p-2 rounded-sm">
       <GlobeIcon />
     </p>
-    <div class="text-xl md:text-2xl font-bold text-white">Card Title</div>
-    <div class="text-gray text-lg md:text-xl">vard text</div>
+    <div class="text-xl md:text-2xl font-semibold tracking-wide text-white">Card Title</div>
+    <div class="text-silver text-lg md:text-xl">vard text</div>
   </div>
 </template>

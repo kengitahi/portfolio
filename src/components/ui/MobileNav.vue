@@ -14,8 +14,10 @@ const toggleMenu = function () {
   emit('blurMain', isMenuOpen.value)
   if (bodyEl.classList.contains('fixed')) {
     bodyEl.classList.remove('fixed')
+    bodyEl.classList.remove('!bg-slate')
   } else {
     bodyEl.classList.add('fixed')
+    bodyEl.classList.add('!bg-slate')
   }
 }
 </script>
@@ -30,7 +32,7 @@ const toggleMenu = function () {
       </div>
     </div>
     <div
-      class="mobile-nav mt-12 absolute bg-white p-4 z-10 w-full right-0 shadow-lg border-t border-t-gray/10 rounded-bl-md rounded-br-md"
+      class="mobile-nav mt-12 absolute bg-slate p-4 z-10 w-full right-0 shadow-lg border-t border-t-gray/10 rounded-bl-md rounded-br-md"
       v-if="isMenuOpen"
     >
       <ul class="flex items-center gap-6 flex-col">

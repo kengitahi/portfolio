@@ -16,7 +16,7 @@ export default {
 <template>
   <a
     :href="link"
-    class="text-xl md:text-2xl lg:text-3xl font-bold text-primary cursor-pointer hover:underline"
+    class="text-xl md:text-2xl lg:text-3xl font-bold text-primary cursor-pointer underline"
   >
     {{ anchor }}
   </a>

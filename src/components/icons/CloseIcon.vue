@@ -1,6 +1,4 @@
-<script>
-
-</script>
+<script></script>
 
 <template>
   <svg
@@ -13,7 +11,7 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="feather feather-x text-gray hover:text-primary hover:cursor-pointer"
+    class="feather feather-x text-primary hover:text-primary hover:cursor-pointer"
   >
     <line x1="18" y1="6" x2="6" y2="18"></line>
     <line x1="6" y1="6" x2="18" y2="18"></line>

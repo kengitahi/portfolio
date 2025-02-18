@@ -14,5 +14,7 @@ export default {
 </script>
 
 <template>
-  <a :href="link" class="text-gray text-lg hover:text-primary hover:cursor-pointer">{{ anchor }}</a>
+  <a :href="link" class="text-silver text-lg hover:text-primary hover:cursor-pointer">{{
+    anchor
+  }}</a>
 </template>

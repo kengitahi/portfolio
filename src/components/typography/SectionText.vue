@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <p class="text-lg md:text-xl font-medium text-gray tracking-wide">
+  <p class="text-lg md:text-xl font-medium text-silver tracking-wide">
     {{ text }}
   </p>
 </template>

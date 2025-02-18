@@ -5,7 +5,7 @@ import HeroButtons from '../ui/HeroButtons.vue'
 </script>
 
 <template>
-  <section class="my-20 md:my-40 items-center flex flex-col text-center space-y-4">
+  <section class="my-20 md:my-40 items-center flex flex-col text-center space-y-4 tracking-wide">
     <HeroHeading />
     <HeroDescription />
     <HeroButtons />

@@ -31,7 +31,7 @@
       />
     </div>
 
-    <PrimaryBtn label="Send Message" type="submit" class="text-white">
+    <PrimaryBtn label="Send Message" type="submit" class="text-ui">
       <template #appendIcon>
         <FontAwesomeIcon :icon="faPaperPlane" />
       </template>

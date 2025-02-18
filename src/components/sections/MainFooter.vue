@@ -11,28 +11,28 @@
 
     <div class="gap-4 flex flex-col">
       <div class="gap-2 flex">
-        <img :src="LetterLogo" alt="Letter Logo" class="max-w-[48px] h-auto" />
+        <img :src="LetterLogo" alt="Letter Logo" class="w-[48px] h-[48px]" />
 
         <div>
-          <p class="text-gray text-lg md:text-xl font-semibold mb-0 tracking-wide">
+          <p class="text-white text-lg md:text-xl font-semibold mb-0 tracking-wide">
             Kennedy Gitahi
           </p>
-          <p class="text-gray text-md md:text-lg font-medium">PHP Developer</p>
+          <p class="text-silver text-md md:text-lg font-medium">PHP Developer</p>
         </div>
       </div>
 
       <div>
-        <p class="text-gray text-md md:text-lg font-medium mb-0 tracking-wide">Email me:</p>
+        <p class="text-silver text-md md:text-lg font-medium mb-0 tracking-wide">Email me:</p>
         <a
           href="mailto:kennedy.gitahi@proton.me"
-          class="text-gray text-lg md:text-xl font-semibold hover:underline hover:text-primary"
+          class="text-white text-lg md:text-xl font-semibold hover:underline hover:text-primary"
         >
           kennedy.gitahi@proton.me
         </a>
       </div>
 
       <div>
-        <p class="text-gray text-md md:text-lg font-medium mb-0 tracking-wide">Follow me:</p>
+        <p class="text-silver text-md md:text-lg font-medium mb-0 tracking-wide">Follow me:</p>
         <FooterIcons />
       </div>
     </div>

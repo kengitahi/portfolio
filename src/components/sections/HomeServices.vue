@@ -7,7 +7,7 @@ import SectionStat from '../ui/SectionStat.vue'
 </script>
 
 <template>
-  <section class="grid md:grid-cols-2 gap-6 items-center py-15">
+  <section class="grid md:grid-cols-2 gap-6 items-center pt-15">
     <div class="space-y-4">
       <SectionTitle title="What I Do For My Clients" />
       <SectionDescription />

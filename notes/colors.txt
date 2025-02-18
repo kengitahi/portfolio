@@ -1,0 +1,17 @@
+/*
+  //Colors
+  #0f0f0f - Main black (main_bg);
+  #1A1A1A - Main gray (card_bg, mobile menu bg)
+  #FFAF29 - Main orange /Accent (buttons bg, icons bg, stats number, faq icons, menu icons, large link);
+  #ffffff - white (header title, section title, text color, nav link color, faq heading)
+  #ffffff, 70% (CCCCCC) - alt-gray (text color, nav link color, experience text, faq text, section subtitle)
+  #252733 - ui-elements (icons color, buttons text color)
+  #484848 - Gray (logos)
+  */
+
+  --color-primary: #FFAF29; /* orange */
+  --color-charcoal: #0f0f0f; /* main black */
+  --color-slate: #1a1a1a; /* main gray */
+  --color-gray: #484848; /* text gray */
+  --color-silver: #cccccc; /* alt gray, text gray */
+  --color-ui: #252733; /*ui elements text */ 

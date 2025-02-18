@@ -4,11 +4,12 @@
 @import './base.css';
 
 @theme {
-  --color-primary: #f7b138;
-
-  --color-gray: #484848;
-  --color-slate: #1a1a1a;
-  --color-charcoal: #0f0f0f;
+  --color-primary: #ffaf29; /* orange */
+  --color-charcoal: #0f0f0f; /* main black */
+  --color-slate: #1a1a1a; /* main gray */
+  --color-gray: #484848; /* text gray */
+  --color-silver: #b3b3b3; /* alt gray, text gray */
+  --color-ui: #252733; /*ui elements text */
 }
 :root {
   --my-blur: 2px;
@@ -22,6 +23,8 @@ body {
   font-family: 'Outfit', sans-serif;
   min-height: 100vh;
   width: 100vw;
+
+  background-color: var(--color-charcoal);
 }
 
 #app {

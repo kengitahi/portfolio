@@ -4,7 +4,7 @@
       <select
         :id="id"
         :value="modelValue"
-        class="custom-select w-full pt-2.5 pb-2.5 pl-3 pr-1 text-base text-gray-700 border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary cursor-pointer bg-gray/10 bg-opacity-20 disabled:bg-primary/30 disabled:cursor-not-allowed"
+        class="custom-select w-full pt-2.5 pb-2.5 pl-3 pr-1 text-base text-silver border-silver rounded-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary cursor-pointer bg-slate bg-opacity-20 disabled:bg-primary/30 disabled:cursor-not-allowed"
         :class="{ 'is-invalid': hasError }"
         @change="$emit('update:modelValue', $event.target.value)"
         :disabled="disabled"
@@ -18,6 +18,7 @@
           :key="option.value"
           :value="option.value"
           :disabled="option.disabled"
+          class="cursor-pointer"
         >
           {{ option.label }}
         </option>

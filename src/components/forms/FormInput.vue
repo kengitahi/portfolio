@@ -2,7 +2,7 @@
   <input
     :type="type"
     :placeholder="placeholder"
-    class="bg-gray/10 bg-opacity-20 px-4 py-2 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary"
+    class="bg-slate placeholder:text-silver bg-opacity-20 px-4 py-2 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary text-white tracking-wide"
     :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
     v-bind="$attrs"

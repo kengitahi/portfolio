@@ -1,10 +1,10 @@
 <!-- Portfolio.vue -->
 <template>
-  <section class="py-15">
+  <section class="pt-15">
     <SectionTitle title="Portfolio" />
     <SectionDescription />
     <!-- Portfolio Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
       <div
         v-for="project in projects"
         :key="project.id"
@@ -22,7 +22,7 @@
           />
           <PrimaryBtn
             :label="'View Details'"
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 peer hover:cursor-pointer hidden group-hover:block transition-all duration-500 ease-in-out text-white font-semibold"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 peer hover:cursor-pointer hidden group-hover:block transition-all duration-500 ease-in-out text-ui hover:!bg-primary hover:text-ui font-semibold"
             @click="openModal(project)"
           />
           <div
@@ -30,7 +30,7 @@
           />
         </div>
         <p
-          class="mb-2 mt-4 text-center tracking-wide font-semibold text-lg md:text-xl text-gray capitalize hover:underline"
+          class="mb-2 mt-4 text-center tracking-wide font-semibold text-lg md:text-xl text-silver capitalize hover:underline"
           @click="openModal(project)"
         >
           {{ project.title }}
@@ -71,19 +71,24 @@
 
             <!-- Modal Content -->
             <div
-              class="relative bg-white rounded-lg max-w-2xl w-full mx-4 overflow-hidden shadow-xl transform transition-all"
+              class="relative bg-slate rounded-lg max-w-2xl w-full mx-4 overflow-hidden shadow-xl transform transition-all"
               :class="modalClasses"
               @click.stop
             >
               <div class="p-6">
                 <!-- Header -->
                 <div class="flex justify-between items-start mb-4">
-                  <h2 :class="['text-2xl font-bold capitalize', titleClasses]">
+                  <h2
+                    :class="[
+                      'text-2xl font-bold capitalize text-white tracking-wide',
+                      titleClasses,
+                    ]"
+                  >
                     {{ selectedProject.title }}
                   </h2>
                   <button
                     @click="closeModal"
-                    class="text-gray-500 hover:text-gray-700 transition-colors hover:cursor-pointer"
+                    class="text-primary hover:text-primary transition-colors hover:cursor-pointer"
                     :class="closeButtonClasses"
                     ref="closeButtonRef"
                   >
@@ -107,12 +112,16 @@
 
                   <div>
                     <!-- Description -->
-                    <p :class="[' text-gray-600', descriptionClasses]">
+                    <p :class="[' text-silver tracking-wide', descriptionClasses]">
                       {{ selectedProject.description }}
                     </p>
                     <p class="mt-4">
-                      <span class="font-bold text-lg">Technologies Used: </span>
-                      <span class="text-gray-500">{{ selectedProject.technologies }}</span>
+                      <span class="font-bold text-lg text-white tracking-wide"
+                        >Technologies Used:
+                      </span>
+                      <span class="text-silver tracking-wide">{{
+                        selectedProject.technologies
+                      }}</span>
                     </p>
                   </div>
                 </div>
@@ -127,7 +136,7 @@
                     :class="[
                       'inline-flex items-center cursor-pointer',
                       githubLinkClasses ||
-                        'text-blue-500 border border-blue-500 hover:underline hover:text-gray hover:bg-primary px-6 py-2 rounded-sm hover:border-primary font-semibold tracking-wider transition-all duration-300 ease-in-out',
+                        'text-blue-500 border border-blue-500 hover:underline hover:text-ui hover:bg-primary px-6 py-2 rounded-sm hover:border-primary font-semibold tracking-wider transition-all duration-300 ease-in-out',
                     ]"
                   >
                     <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -146,6 +155,7 @@
                     rel="noopener noreferrer"
                     :link="selectedProject.liveUrl"
                     :anchor="liveUrlText || 'Visit Live Project'"
+                    class="text-ui"
                   >
                     <template #icon>
                       <svg
