@@ -1,6 +1,10 @@
 <template>
-  <div class="gap-4 flex text-white">
-    <a href="https://www.linkedin.com/in/kennedygitahi/" target="_blank" title="Visit my Linkedin profile">
+  <div class="gap-4 flex text-white mt-1">
+    <a
+      href="https://www.linkedin.com/in/kennedygitahi/"
+      target="_blank"
+      title="Visit my Linkedin profile"
+    >
       <img src="@/assets/imgs/icons/linkedin.svg" alt="Linkedin Logo" />
     </a>
     <a href="https://github.com/kengitahi" target="_blank" title="Visit my Github profile">
