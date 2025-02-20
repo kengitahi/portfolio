@@ -27,3 +27,22 @@ defineProps({
 
 defineEmits(['update:modelValue'])
 </script>
+
+<style scoped>
+/* Target Chrome, Safari, and newer Edge */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white;
+}
+
+/* For Firefox */
+input:autofill,
+input:autofill:hover,
+input:autofill:focus {
+  box-shadow: 0 0 0px 1000px #1a1a1a inset !important;
+  -webkit-text-fill-color: white;
+}
+</style>

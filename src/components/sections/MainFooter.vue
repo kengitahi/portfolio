@@ -1,5 +1,5 @@
 <template>
-  <footer class="grid md:grid-cols-2 gap-6 py-15">
+  <footer class="grid md:grid-cols-2 gap-6 pt-15">
     <div class="gap-4 flex flex-col">
       <SectionTitle title="Let's Work Together" class="mb-0" />
       <div class="flex items-center gap-2">

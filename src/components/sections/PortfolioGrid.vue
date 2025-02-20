@@ -126,7 +126,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center gap-4 mt-4">
+                <div class="flex items-center gap-4 mt-4 flex-col md:flex-row">
                   <!-- GitHub Link -->
                   <a
                     v-if="selectedProject.githubLink"
@@ -186,7 +186,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
-import { projects } from '../../data/projects'
+import { projects } from '../../data/Projects'
 import PrimaryBtn from '../buttons/PrimaryBtn.vue'
 import PrimaryBtnLink from '../links/PrimaryBtnLink.vue'
 import SectionTitle from '../typography/SectionTitle.vue'

@@ -28,10 +28,10 @@ const isMenuOpen = ref(false)
 
   <main :class="{ 'blur-[4px]': isMenuOpen }" class="flex flex-col">
     <HomeHero />
+    <AboutSection id="about" />
     <HomeServices id="services" />
     <HomeExpertise />
     <PortfolioGrid id="projects" />
-    <AboutSection id="about" />
     <FaqAccordion id="faq" />
     <ContactSection id="contact" />
     <MainFooter />

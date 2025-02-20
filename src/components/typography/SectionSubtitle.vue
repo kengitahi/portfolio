@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <p class="capitalize text-gray text-md md:text-lg font-medium mb-0 tracking-wide">
+  <p class="capitalize text-silver text-md md:text-lg font-medium mb-0 tracking-wide">
     {{ subtitle }}
   </p>
 </template>

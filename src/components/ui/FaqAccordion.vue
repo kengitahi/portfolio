@@ -1,5 +1,5 @@
 <template>
-  <section class="accordion py-15">
+  <section class="accordion pt-15">
     <SectionTitle title="FAQ" />
     <accordion-item
       v-for="(item, index) in faqItems"
