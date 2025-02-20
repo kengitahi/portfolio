@@ -1,7 +1,7 @@
 <template>
   <div
     class="accordion-item cursor-pointer mb-2 border-silver rounded-sm border-[2px]"
-    :class="{ 'border-primary': isActive }"
+    :class="{ '!border-primary': isActive }"
   >
     <div
       class="accordion-header p-4 cursor-pointer relative flex items-center text-white text-lg md:text-xl font-semibold mb-0 tracking-wide"

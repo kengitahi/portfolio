@@ -1,5 +1,5 @@
 <script setup>
-import MainLogo from '../../assets/imgs/main-logo.png'
+import MainLogo from '../../assets/imgs/silver-logo.png'
 import MobileLogo from '../../assets/imgs/mobile-logo.png'
 import NavLink from '../links/NavLink.vue'
 </script>

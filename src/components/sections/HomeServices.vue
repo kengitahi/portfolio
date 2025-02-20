@@ -15,8 +15,8 @@ import { services } from '../../data/Services'
       <div
         class="justify-between grid gap-6 mx-auto grid-cols-[repeat(auto-fit,minmax(128px,1fr))]"
       >
-        <SectionStat title="Projects Completed" number="123" />
-        <SectionStat title="Happy Clients" number="456" />
+        <SectionStat title="Projects Completed" number="50+" />
+        <SectionStat title="Happy Clients" number="20+" />
       </div>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
