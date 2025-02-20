@@ -8,8 +8,8 @@ export const projects = [
     githubLink: 'https://github.com/kengitahi/invoice-generator',
     description: 'An invoice generator I built using the TALL(Tailwind, Alpine JS, Livewire, Laravel) stack.It allows users to sign up, create invoices, download invoices as PDFs and either send the invoices as emails or as email attachments. Visitors can also create an account to save their invoices and edit, delete, or resend them later.',
     technologies: 'Laravel, PHP, Tailwind, AlpineJS, Git, Livewire, SQLite, MySQL, Puppeteer, Breeze',
-    mainImage: './assets/imgs/portfolioImages/invoice_generator_homepage_thumb.png',
-    modalImage: './assets/imgs/portfolioImages/invoice_generator_homepage.png',
+    mainImage: '/assets/imgs/portfolioImages/invoice_generator_homepage_thumb.png',
+    modalImage: '/assets/imgs/portfolioImages/invoice_generator_homepage.png',
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ export const projects = [
     githubLink: 'https://github.com/kengitahi/houz',
     description: 'A real estate website that pulls data from the Bayut API and displays the data on homepage, search page, and single property page. Has search functionality that pulls data from the API. A user can also create an account and add their own property.',
     technologies: 'Rest API, Laravel, PHP, Tailwind, AlpineJS, Git, Livewire, SQLite, MySQL, Breeze',
-    mainImage: './assets/imgs/portfolioImages/homez-home.png',
-    modalImage: './assets/imgs/portfolioImages/homez-all.png',
+    mainImage: '/assets/imgs/portfolioImages/homez-home.png',
+    modalImage: '/assets/imgs/portfolioImages/homez-all.png',
   },
   {
     id: 3,
@@ -30,8 +30,8 @@ export const projects = [
     githubLink: 'https://github.com/kengitahi/Kengitahi-house',
     description: 'A simple figma to HTML conversion.This website is also responsive on all devices and features an interesting gallery and call to action.',
     technologies: 'HTML, CSS, Git, Javascript, Figma',
-    mainImage: './assets/imgs/portfolioImages/house_homepage_thumb.png',
-    modalImage: './assets/imgs/portfolioImages/house_homepage.png'
+    mainImage: '/assets/imgs/portfolioImages/house_homepage_thumb.png',
+    modalImage: '/assets/imgs/portfolioImages/house_homepage.png'
 
   },
   {
@@ -42,8 +42,8 @@ export const projects = [
     githubLink: 'https://github.com/kengitahi/Ovtgen-Media',
     description: 'Ovtgen media Youtube Clone using Material UI and RapidAPI.It has a single video page, single channel page, recommended videos, and search functionality.',
     technologies: 'Rest API, Next.js, Material UI,',
-    mainImage: './assets/imgs/portfolioImages/ovtgen-home.png',
-    modalImage: './assets/imgs/portfolioImages/ovtgenmedia-single-video.png',
+    mainImage: '/assets/imgs/portfolioImages/ovtgen-home.png',
+    modalImage: '/assets/imgs/portfolioImages/ovtgenmedia-single-video.png',
   },
   {
     id: 5,
@@ -53,8 +53,8 @@ export const projects = [
     githubLink: '',
     description: 'A Nextjs website for a car selling business. It features a custom admin dashboard, user authentication, and a car listing page with filters and search functionality.',
     technologies: 'Next.js, Figma, CSS, Webpack, Nodejs',
-    mainImage: './assets/imgs/portfolioImages/morent-home.png',
-    modalImage: './assets/imgs/portfolioImages/morent-home.png',
+    mainImage: '/assets/imgs/portfolioImages/morent-home.png',
+    modalImage: '/assets/imgs/portfolioImages/morent-home.png',
   },
   {
     id: 6,
@@ -64,7 +64,7 @@ export const projects = [
     githubLink: 'https://github.com/kengitahi/mainstreet',
     description: 'A Nextjs website for a web development and digital marketing business.',
     technologies: 'Next.js, Figma, CSS, Webpack, Nodejs',
-    mainImage: './assets/imgs/portfolioImages/mainstreetdigital-home.png',
-    modalImage: './assets/imgs/portfolioImages/mainstreetdigital-home.png',
+    mainImage: '/assets/imgs/portfolioImages/mainstreetdigital-home.png',
+    modalImage: '/assets/imgs/portfolioImages/mainstreetdigital-home.png',
   },
 ]
