@@ -1,6 +1,5 @@
 <template>
-  <p class="text-silver text-md md:text-lg font-medium tracking-wide my-2">
-    I am a Frontend Developer with a passion for building beautiful, responsive, and user-friendly
-    web applications.
-  </p>
+  <div class="text-silver text-md md:text-lg font-medium tracking-wide">
+    <slot />
+  </div>
 </template>

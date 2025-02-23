@@ -11,9 +11,20 @@
       </div>
     </div>
     <div>
-      <SectionSubTitle subtitle="My Intro" />
+      <SectionSubTitle subtitle="Hi, I'm Kennedy." />
       <SectionTitle title="About Me" class="mt-0" />
-      <SectionDescription />
+      <SectionDescription>
+        <p class="my-2">
+          Tired of nagging business challenges holding you back? I specialize in providing custom
+          web development solutions that help solve different business challenges using PHP
+          (Laravel) and JavaScript (Vue.js and Next.js).
+        </p>
+        <p class="my-2">
+          I partner with brands and businesses to build web applications that streamline processes,
+          improve efficiency, and drive tangible results. My focus is on delivering user-friendly,
+          feature-rich web experiences that empower your business to succeed.
+        </p>
+      </SectionDescription>
     </div>
   </section>
 </template>
