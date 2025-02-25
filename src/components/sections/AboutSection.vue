@@ -15,16 +15,23 @@
       <SectionTitle title="About Me" class="mt-0" />
       <SectionDescription>
         <p class="my-2">
-          Tired of nagging business challenges holding you back? I specialize in providing custom
-          web development solutions that help solve different business challenges using PHP
-          (Laravel) and JavaScript (Vue.js and Next.js).
+          I specialize in providing custom web development solutions that help solve different
+          business challenges using PHP (Laravel) and JavaScript (Vue.js and Next.js).
         </p>
         <p class="my-2">
           I partner with brands and businesses to build web applications that streamline processes,
-          improve efficiency, and drive tangible results. My focus is on delivering user-friendly,
-          feature-rich web experiences that empower your business to succeed.
+          improve efficiency, and drive tangible results.
+        </p>
+        <p class="my-2">
+          My focus is on delivering user-friendly, feature-rich web experiences that empower your
+          business to succeed.
         </p>
       </SectionDescription>
+      <PrimaryBtnLink anchor="Say Hi!" link="#contact" class="mt-4">
+        <template #prependIcon>
+          <FontAwesomeIcon :icon="faComments" />
+        </template>
+      </PrimaryBtnLink>
     </div>
   </section>
 </template>
@@ -34,6 +41,10 @@ import ProfilePicture from '@/assets/imgs/profileImages/me.jpg'
 import SectionTitle from '@/components/typography/SectionTitle.vue'
 import SectionSubTitle from '@/components/typography/SectionSubtitle.vue'
 import SectionDescription from '@/components/typography/SectionDescription.vue'
+import PrimaryBtnLink from '@/components/links/PrimaryBtnLink.vue'
+
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faComments } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <style scoped>
