@@ -10,9 +10,15 @@ defineProps({
 
 <template>
   <div class="service-card space-y-2 bg-slate p-4 rounded-sm shadow-lg">
-    <p class="bg-primary w-fit p-2 rounded-sm">
-      <GlobeIcon />
-    </p>
+    <div class="bg-primary w-fit p-2 rounded-sm text-ui">
+      <img
+        v-if="service.icon"
+        :src="service.icon"
+        :alt="service.title"
+        class="w-full h-16 object-cover"
+      />
+      <GlobeIcon v-else class="w-full h-16 object-cover" />
+    </div>
     <div class="text-xl md:text-2xl font-semibold tracking-wide text-white">
       {{ service.title }}
     </div>
