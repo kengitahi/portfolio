@@ -16,8 +16,7 @@ import { services } from '../../data/Services'
       id="sticky-section"
     >
       <SectionTitle title="Services" />
-      <SectionSubTitle subtitle="What I Do For My Clients" />
-      <SectionDescription />
+      <SectionSubTitle subtitle="What I Do For My Clients" class="mb-4" />
       <div
         class="justify-between hidden lg:grid gap-6 mx-auto grid-cols-[repeat(auto-fit,minmax(128px,1fr))]"
       >

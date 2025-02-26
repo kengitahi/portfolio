@@ -2,7 +2,7 @@
 <template>
   <section class="pt-15">
     <SectionTitle title="Portfolio" />
-    <SectionDescription />
+    <SectionSubtitle subtitle="Some of my past Projects" class="mb-4" />
     <!-- Portfolio Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
       <div
