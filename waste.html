@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Section Header</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      /* Hero section (placeholder) */
+      .hero {
+        height: 100vh;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Services section */
+      .services {
+        padding: 2rem 0;
+        position: relative;
+      }
+
+      .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      /* Left column - Section title */
+      .section-title-container {
+        width: 40%;
+        position: relative;
+      }
+
+      .section-title-sticky {
+        position: sticky;
+        top: 0;
+        padding: 2rem;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .section-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #777;
+      }
+
+      .section-heading {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Right column - Cards */
+      .services-cards {
+        width: 60%;
+        padding: 2rem;
+      }
+
+      .service-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        min-height: 300px;
+      }
+
+      /* Expertise section */
+      .expertise {
+        padding: 5rem 0;
+        background-color: #f5f5f5;
+      }
+
+      .expertise-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .expertise-title-container {
+        width: 40%;
+      }
+
+      .expertise-cards {
+        width: 60%;
+      }
+
+      .expertise-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        min-height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero section (placeholder) -->
+    <section class="hero">
+      <h1>Welcome to my portfolio</h1>
+    </section>
+
+    <!-- Services section -->
+    <section class="services services-container" id="services-section">
+      <div class="section-title-sticky" id="sticky-title">
+        <div class="section-label">Section</div>
+        <h2 class="section-heading">What I do for my clients</h2>
+        <p>Delivering exceptional services tailored to your needs</p>
+      </div>
+      <div class="services-cards">
+        <div class="service-card">
+          <h3>Service 1</h3>
+          <p>Detailed description of service 1 goes here.</p>
+        </div>
+        <div class="service-card">
+          <h3>Service 2</h3>
+          <p>Detailed description of service 2 goes here.</p>
+        </div>
+        <div class="service-card">
+          <h3>Service 3</h3>
+          <p>Detailed description of service 3 goes here.</p>
+        </div>
+        <div class="service-card">
+          <h3>Service 4</h3>
+          <p>Detailed description of service 4 goes here.</p>
+        </div>
+        <div class="service-card">
+          <h3>Service 5</h3>
+          <p>Detailed description of service 5 goes here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise section -->
+    <section class="expertise" id="expertise-section">
+      <div class="expertise-container">
+        <div class="expertise-title-container">
+          <div class="section-label">Section</div>
+          <h2 class="section-heading">My Expertise</h2>
+          <p>Areas where I excel and bring the most value</p>
+        </div>
+        <div class="expertise-cards">
+          <div class="expertise-card">
+            <h3>Expertise 1</h3>
+            <p>Detailed description of expertise 1 goes here.</p>
+          </div>
+          <div class="expertise-card">
+            <h3>Expertise 2</h3>
+            <p>Detailed description of expertise 2 goes here.</p>
+          </div>
+          <div class="expertise-card">
+            <h3>Expertise 3</h3>
+            <p>Detailed description of expertise 3 goes here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const stickyTitle = document.getElementById('sticky-title')
+        const servicesSection = document.getElementById('services-section')
+        const expertiseSection = document.getElementById('expertise-section')
+
+        function handleScroll() {
+          const servicesSectionRect = servicesSection.getBoundingClientRect()
+          const expertiseSectionRect = expertiseSection.getBoundingClientRect()
+
+          // Check if we've scrolled to the services section
+          if (servicesSectionRect.top <= 0 && expertiseSectionRect.top > 0) {
+            // We're in the services section, make the title sticky
+            stickyTitle.style.position = 'sticky'
+          } else if (expertiseSectionRect.top <= 0) {
+            // We've reached the expertise section, unstick
+            stickyTitle.style.position = 'relative'
+          } else {
+            // We're above the services section
+            stickyTitle.style.position = 'relative'
+          }
+        }
+
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll)
+
+        // Initial call
+        handleScroll()
+      })
+    </script>
+  </body>
+</html>
