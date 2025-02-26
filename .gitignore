@@ -14,6 +14,9 @@ dist-ssr
 coverage
 *.local
 
+# Debug and stuff
+*waste*
+
 /cypress/videos/
 /cypress/screenshots/
 
