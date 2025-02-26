@@ -10,7 +10,7 @@ import { services } from '../../data/Services'
 
 <template>
   <!-- Services section -->
-  <section class="grid lg:grid-cols-2 gap-6 pt-15 relative mt-8" id="services-section">
+  <section class="grid lg:grid-cols-2 gap-6 pt-15 relative mt-8" id="services">
     <div
       class="section-title-sticky relative lg:sticky top-0 !h-fit md:h-[100vh]"
       id="sticky-section"

@@ -1,7 +1,7 @@
 // stickySection.js
 export function initStickySection() {
   const stickySection = document.getElementById('sticky-section');
-  const servicesSection = document.getElementById('services-section');
+  const servicesSection = document.getElementById('services');
   const expertiseSection = document.getElementById('expertise-section');
 
   function handleScroll() {
