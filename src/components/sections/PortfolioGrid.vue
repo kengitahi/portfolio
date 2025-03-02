@@ -58,16 +58,7 @@
         >
           <div class="flex min-h-full items-center justify-center p-4">
             <!-- Backdrop -->
-            <TransitionChild
-              enter-active-class="transition-opacity ease-in duration-300"
-              enter-from-class="opacity-0"
-              enter-to-class="opacity-100"
-              leave-active-class="transition-opacity ease-out duration-200"
-              leave-from-class="opacity-100"
-              leave-to-class="opacity-0"
-            >
-              <div class="fixed inset-0 bg-black/90 bg-opacity-50" />
-            </TransitionChild>
+            <div class="fixed inset-0 bg-black/90 bg-opacity-70" />
 
             <!-- Modal Content -->
             <div
@@ -191,7 +182,6 @@ import PrimaryBtn from '../buttons/PrimaryBtn.vue'
 import PrimaryBtnLink from '../links/PrimaryBtnLink.vue'
 import SectionTitle from '../typography/SectionTitle.vue'
 import SectionSubtitle from '../typography/SectionSubtitle.vue'
-import SectionDescription from '../typography/SectionDescription.vue'
 
 const props = defineProps({
   modalClasses: {

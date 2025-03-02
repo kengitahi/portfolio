@@ -1,3 +1,4 @@
+<!-- Legacy implementation -->
 <template>
   <div
     class="accordion-item cursor-pointer mb-2 border-silver rounded-sm border-[2px]"

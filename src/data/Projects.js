@@ -1,4 +1,3 @@
-// Sample portfolio data - replace with your own
 export const projects = [
   {
     id: 1,

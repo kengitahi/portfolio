@@ -1,0 +1,105 @@
+{
+  "faqSections": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "questions": [
+        {
+          "id": "info-needed",
+          "question": "What information do you need from me to get started on a project?",
+          "answer": "I typically need a clear description of your project goals, target audience, any design preferences, technical requirements, and timeline expectations. The more details you can provide, the better I can tailor my approach. For larger projects, I'll provide a detailed questionnaire to help you articulate your vision. I'm also happy to schedule an initial consultation call to discuss your needs more thoroughly."
+        },
+        {
+          "id": "industry-experience",
+          "question": "Have you worked with businesses in my industry before?",
+          "answer": "I've worked with clients across diverse industries including [mention 2-3 relevant industries here]. While each industry has unique requirements, my experience has taught me how to quickly adapt to different business domains. For industries new to me, I invest time in research to understand your specific challenges and standards. My portfolio includes examples of past work that demonstrate my versatility across sectors."
+        }
+      ]
+    },
+    {
+      "id": "project-planning",
+      "title": "Project Planning and Execution",
+      "questions": [
+        {
+          "id": "feature-prioritization",
+          "question": "How do you prioritize features when working within budget constraints?",
+          "answer": "I use a value-driven approach to feature prioritization. We'll collaborate to identify \"must-have\" versus \"nice-to-have\" features based on your business goals and user needs. I implement core functionality first, then add enhancements as budget allows. This approach ensures you get a functional product that delivers value, even with limited resources. I'm transparent about what's achievable within your budget and can suggest phased implementations if needed."
+        },
+        {
+          "id": "project-timeline",
+          "question": "How long does a typical project take from start to finish?",
+          "answer": "Project timelines vary based on complexity and scope. Simple websites typically take 2-4 weeks, while more complex web applications may require 2-3 months. E-commerce solutions generally take 1-3 months depending on customization needs. After our initial consultation, I'll provide a detailed timeline with key milestones. I'm committed to meeting agreed-upon deadlines while maintaining quality standards."
+        },
+        {
+          "id": "communication",
+          "question": "How do you communicate progress throughout the development process?",
+          "answer": "I believe in transparent, consistent communication. You'll receive weekly progress updates via email, and we'll have scheduled check-in calls at key milestones. I use project management tools that give you visibility into task completion and upcoming work. For day-to-day communication, I'm available through your preferred channel (email, Slack, etc.). My goal is to keep you informed without overwhelming you with technical details unless desired."
+        }
+      ]
+    },
+    {
+      "id": "budget-pricing",
+      "title": "Budget and Pricing",
+      "questions": [
+        {
+          "id": "pricing-structure",
+          "question": "What is your pricing structure? Do you charge hourly, fixed-price, or use another model?",
+          "answer": {
+            "text": "I offer flexible pricing options tailored to your project needs:",
+            "list": [
+              "Fixed-price contracts for well-defined projects with clear requirements",
+              "Hourly rates for exploratory work or projects with evolving scopes",
+              "Retainer arrangements for ongoing development needs"
+            ],
+            "conclusion": "For most client projects, I prefer fixed-price agreements as they provide budget certainty. After our initial consultation, I'll recommend the most appropriate pricing model and provide a detailed proposal. All pricing options include regular milestones and deliverables to ensure transparency."
+          }
+        },
+        {
+          "id": "change-requests",
+          "question": "How do you handle change requests or scope creep during a project?",
+          "answer": "I understand that requirements evolve as projects progress. Minor adjustments are accommodated within the original agreement. For substantial changes, I'll assess the impact on timeline and budget, then provide you with options before proceeding. I document all change requests and maintain a change log that's accessible to you. This approach ensures transparency while allowing flexibility for your evolving needs."
+        }
+      ]
+    },
+    {
+      "id": "support-maintenance",
+      "title": "Support and Maintenance",
+      "questions": [
+        {
+          "id": "ongoing-support",
+          "question": "What is your availability for ongoing maintenance and support after project completion?",
+          "answer": {
+            "text": "I offer several post-launch support options:",
+            "list": [
+              "A 30-day warranty period for all projects to address any immediate issues",
+              "Monthly maintenance packages for regular updates and minor improvements",
+              "Priority support agreements for business-critical applications",
+              "Ad-hoc support at my standard hourly rate"
+            ],
+            "conclusion": "I recommend discussing maintenance needs early in the project planning phase so we can build with long-term support in mind. My goal is to ensure your solution remains secure, performant, and up-to-date."
+          }
+        },
+        {
+          "id": "urgent-issues",
+          "question": "What's your process for handling urgent issues or emergency fixes?",
+          "answer": "For clients with support agreements, I provide a dedicated channel for reporting urgent issues with guaranteed response times (typically within 1-4 hours depending on your support tier). I maintain detailed documentation of all projects, allowing me to quickly address emergency situations. For business-critical applications, I can implement monitoring systems that alert me to potential issues before they impact your operations."
+        },
+        {
+          "id": "guarantees",
+          "question": "Do you offer any guarantees or warranties on your work?",
+          "answer": {
+            "text": "Yes, all my work comes with a 30-day warranty period after project completion. During this time, I'll fix any bugs or issues at no additional cost. I also guarantee:",
+            "list": [
+              "Code that follows industry best practices",
+              "Cross-browser compatibility as specified in our agreement",
+              "Responsive design for mobile devices",
+              "Adherence to accessibility guidelines",
+              "Secure coding practices"
+            ],
+            "conclusion": "My contracts clearly outline what's covered under warranty and what would constitute billable changes or enhancements."
+          }
+        }
+      ]
+    }
+  ]
+}
