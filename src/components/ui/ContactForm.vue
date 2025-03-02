@@ -1,5 +1,13 @@
 <template>
-  <form action="" class="space-y-4" @submit.prevent="handleSubmit">
+  <form
+    class="space-y-4"
+    @submit.prevent="handleSubmit"
+    name="main-contact-form"
+    method="post"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="form-name" value="main-contact-form" />
     <div class="flex gap-4 md:flex-row flex-col justify-between">
       <div class="w-full flex flex-col md:w-[48%] gap-2">
         <FormLabel label="Name" forId="name" />
