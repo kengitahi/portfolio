@@ -51,6 +51,11 @@
             <template v-if="typeof item.answer === 'string'">
               <p>{{ item.answer }}</p>
             </template>
+            <template v-if="Array.isArray(item.answer.text)">
+              <p v-for="answer in item.answer.text" :key="answer" class="my-2">
+                {{ answer }}
+              </p>
+            </template>
             <template v-else>
               <p>{{ item.answer.text }}</p>
               <ul v-if="item.answer.list" class="my-2 pl-6 list-disc list-inside">
@@ -58,6 +63,12 @@
               </ul>
               <p v-if="item.answer.conclusion">{{ item.answer.conclusion }}</p>
             </template>
+            <PrimaryBtnLink
+              v-if="item.contact == true"
+              anchor="Contact Me"
+              link="#contact"
+              class="mt-4"
+            />
           </div>
         </div>
       </div>
@@ -67,8 +78,9 @@
 
 <script>
 import { ref } from 'vue'
-import SectionTitle from '../typography/SectionTitle.vue'
-import SectionSubtitle from '../typography/SectionSubtitle.vue'
+import SectionTitle from '@/components/typography/SectionTitle.vue'
+import SectionSubtitle from '@/components/typography/SectionSubtitle.vue'
+import PrimaryBtnLink from '@/components/links/PrimaryBtnLink.vue'
 
 import faqData from '@/data/faqData.json'
 
@@ -80,6 +92,7 @@ export default {
   components: {
     SectionTitle,
     SectionSubtitle,
+    PrimaryBtnLink,
   },
   data() {
     return {
@@ -125,6 +138,19 @@ export default {
 .section-header.active .icon,
 .question-header.active .icon {
   transform: rotate(180deg);
+}
+
+div:has(.section-header.active) {
+  border-color: #ffaf29;
+}
+
+.question-content {
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+div:has(.question-header.active) .question-content {
+  height: auto;
 }
 
 .icon {
