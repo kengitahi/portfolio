@@ -54,6 +54,14 @@ import FormInput from '@/components/forms/FormInput.vue'
 import FormLabel from '@/components/forms/FormLabel.vue'
 import FormTextarea from '@/components/forms/FormTextarea.vue'
 import FormSelect from '@/components/forms/FormSelect.vue'
+import { ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+
+const formData = ref({
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+})
 </script>
