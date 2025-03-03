@@ -1,5 +1,5 @@
 <template>
-  <section class="py-15">
+  <section class="pt-15">
     <SectionTitle title="Contact Me" />
     <SectionSubtitle
       subtitle="Get In Touch, Ask a Question, Request a quote, or just say hello."
