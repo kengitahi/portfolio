@@ -15,7 +15,7 @@
           type="text"
           placeholder="e.g John Doe"
           id="name"
-          @input="name = $event.target.value"
+          @input="form.name = $event.target.value"
         />
       </div>
 
@@ -25,14 +25,14 @@
           type="email"
           placeholder="e.g john@example.com"
           id="email"
-          @input="email = $event.target.value"
+          @input="form.email = $event.target.value"
         />
       </div>
     </div>
 
     <div class="w-full flex flex-col md:w-[48%] gap-2">
       <FormLabel label="Subject" forId="subject" />
-      <FormSelect :options="formOptions" @input="subject = $event.target.value" />
+      <FormSelect :options="formOptions" @input="form.subject = $event.target.value" />
     </div>
 
     <div class="w-full flex flex-col gap-2">
@@ -40,7 +40,7 @@
       <FormTextarea
         placeholder="e.g I need a new website for my business. I'm looking for a responsive design that will work on all devices..."
         id="message"
-        @input="message = $event.target.value"
+        @input="form.message = $event.target.value"
       />
     </div>
 
@@ -96,18 +96,15 @@ export default {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       }
-      axios
-        .post(
-          '/',
-          this.encode({
-            'form-name': 'main-contact-form',
-            ...this.form,
-          }),
-          axiosConfig,
-        )
-        .then(() => {
-          this.resetForm()
-        })
+      axios.post(
+        '/',
+        this.encode({
+          'form-name': 'main-contact-form',
+          ...this.form,
+        }),
+        axiosConfig,
+      )
+      this.resetForm()
     },
   },
 }
