@@ -11,7 +11,7 @@
 
     <div class="gap-4 flex flex-col">
       <div class="gap-2 flex">
-        <img :src="LetterLogo" alt="Letter Logo" class="w-[48px] h-[48px]" />
+        <img :src="LetterLogo" alt="Letter Logo" class="size-12" />
 
         <div>
           <p class="text-white text-lg md:text-xl font-semibold mb-0 tracking-wide">
