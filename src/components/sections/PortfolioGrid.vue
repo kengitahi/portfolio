@@ -22,7 +22,7 @@
           />
           <PrimaryBtn
             :label="'View Details'"
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 peer hover:cursor-pointer hidden group-hover:block transition-all duration-500 ease-in-out text-ui hover:!bg-primary hover:text-ui font-semibold"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 peer hover:cursor-pointer hidden group-hover:block transition-all duration-500 ease-in-out text-ui hover:bg-primary! hover:text-ui font-semibold"
             @click="openModal(project)"
           />
           <div

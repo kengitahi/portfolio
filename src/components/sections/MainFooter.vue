@@ -27,7 +27,7 @@
           href="mailto:kennedy.gitahi@proton.me"
           class="text-white text-lg md:text-xl font-semibold hover:underline hover:text-primary"
         >
-          kennedy.gitahi@proton.me
+          kengitahi@proton.me
         </a>
       </div>
 
