@@ -1,6 +1,6 @@
 <template>
-  <section class="pt-10 grid md:grid-cols-[1fr_2fr] gap-6 items-center">
-    <div class="image-container w-[60%] mx-auto md:w-full">
+  <section class="pt-10 grid gap-6 items-center">
+    <!-- <div class="image-container w-[60%] mx-auto md:w-full">
       <div class="corner-frame">
         <img
           :src="ProfilePicture"
@@ -9,22 +9,48 @@
           class="max-w-[60%] md:w-full"
         />
       </div>
-    </div>
+    </div> -->
     <div>
       <SectionSubTitle subtitle="Hi, I'm Kennedy." />
       <SectionTitle title="About Me" class="mt-0" />
       <SectionDescription>
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+          <div class="image-container mx-auto w-full md:w-1/3">
+            <div class="corner-frame">
+              <img
+                :src="ProfilePicture"
+                alt="Kennedy Gitahi"
+                title="Kennedy Gitahi"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div class="w-full md:w-2/3">
+            <p class="my-2">
+              I build WordPress and Laravel sites for businesses that need custom solutions. These
+              include features like automated staff onboarding when someone fills out a form,
+              booking systems that don't double-book, a point-of-sale system that keeps working when
+              the internet drops, and fast, app-like pages that don't need a slow framework to load.
+            </p>
+            <p class="my-2">
+              I also handle the unglamorous stuff that keeps your business running day to day. I fix
+              what broke, update what's outdated, and am someone you can reach when something goes
+              wrong.
+            </p>
+          </div>
+        </div>
+
         <p class="my-2">
-          I specialize in providing custom web development solutions that help solve different
-          business challenges using PHP (Laravel) and JavaScript (Vue.js and Next.js).
+          Recent work includes a custom WordPress theme for a Nairobi tax and compliance firm, built
+          to show up in local Google searches, an appointment-booking system, and a cookie consent
+          plugin built to Kenya's Data Protection Act requirements. I also recently built a retail
+          POS system that uses your mobile phone's camera for stock taking, inventory management,
+          and sales recording and that syncs sales data once connectivity is back.
         </p>
         <p class="my-2">
-          I partner with brands and businesses to build web applications that streamline processes,
-          improve efficiency, and drive tangible results.
-        </p>
-        <p class="my-2">
-          My focus is on delivering user-friendly, feature-rich web experiences that empower your
-          business to succeed.
+          Stack: PHP (Laravel/WordPress), JavaScript (Vue, Alpine, HTMX). I also handle SEO content
+          and digital marketing so your site also shows up on Google and AI chatbot recommendations.
         </p>
       </SectionDescription>
       <PrimaryBtnLink anchor="Say Hi!" link="#contact" class="mt-4">
@@ -68,26 +94,26 @@ import { faComments } from '@fortawesome/free-solid-svg-icons'
 
 /* Top-left corner */
 .corner-frame::before {
-  top: 0;
-  left: 0;
+  top: 0.5em;
+  left: 0.5em;
   border-right: none;
   border-bottom: none;
 
   width: 30%;
   height: 30%;
-  border-width: 10px;
+  border-width: 0.25em;
 }
 
 /* Bottom-right corner */
 .corner-frame::after {
-  bottom: 0;
-  right: 0;
+  bottom: 0.5em;
+  right: 0.5em;
   border-left: none;
   border-top: none;
 
   width: 30%;
   height: 30%;
-  border-width: 12px;
+  border-width: 0.25em;
 }
 
 img {

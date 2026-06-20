@@ -1,12 +1,11 @@
 <script setup>
-import PrimaryBtn from '../buttons/PrimaryBtn.vue'
 import PrimaryBtnLink from '../links/PrimaryBtnLink.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faBriefcase, faLaptopFile } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <template>
-  <div class="flex items-center gap-6 flex-col md:flex-row">
+  <div class="flex items-center gap-6 flex-col md:flex-row mt-2">
     <PrimaryBtnLink link="/#services" anchor="What I Do">
       <template #prependIcon>
         <FontAwesomeIcon :icon="faBriefcase" />
