@@ -11,14 +11,19 @@ export default {
 <template>
   <section>
     <div class="flex gap-4 flex-wrap">
-      <ExpertiseText text="Laravel">
-        <template #icon>
-          <img src="/icons/laravel.svg" alt="Laravel" />
-        </template>
-      </ExpertiseText>
       <ExpertiseText text="PHP">
         <template #icon>
           <img src="/icons/php.svg" alt="PHP" />
+        </template>
+      </ExpertiseText>
+      <ExpertiseText text="Wordpress">
+        <template #icon>
+          <img src="/icons/wordpress.svg" alt="Wordpress" />
+        </template>
+      </ExpertiseText>
+      <ExpertiseText text="Laravel">
+        <template #icon>
+          <img src="/icons/laravel.svg" alt="Laravel" />
         </template>
       </ExpertiseText>
       <ExpertiseText text="JavaScript">
@@ -31,9 +36,14 @@ export default {
           <img src="/icons/vue.svg" alt="Vue.js" />
         </template>
       </ExpertiseText>
-      <ExpertiseText text="Next.js">
+      <ExpertiseText text="Alpine.js">
         <template #icon>
-          <img src="/icons/next.svg" alt="Next.js" />
+          <img src="/icons/alpinejs.svg" alt="Alpine.js" />
+        </template>
+      </ExpertiseText>
+      <ExpertiseText text="htmx">
+        <template #icon>
+          <img src="/icons/htmx.svg" alt="htmx" />
         </template>
       </ExpertiseText>
       <ExpertiseText text="Figma">
