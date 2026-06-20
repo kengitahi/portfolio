@@ -12,7 +12,7 @@ import { services } from '../../data/Services'
   <!-- Services section -->
   <section class="grid lg:grid-cols-2 gap-6 pt-15 relative mt-8" id="services">
     <div
-      class="section-title-sticky relative lg:sticky top-0 !h-fit md:h-[100vh]"
+      class="section-title-sticky relative lg:sticky top-0 h-fit! md:h-screen"
       id="sticky-section"
     >
       <SectionTitle title="Services" />

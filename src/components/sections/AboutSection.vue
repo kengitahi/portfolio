@@ -48,9 +48,10 @@
           POS system that uses your mobile phone's camera for stock taking, inventory management,
           and sales recording and that syncs sales data once connectivity is back.
         </p>
-        <p class="my-2">
-          Stack: PHP (Laravel/WordPress), JavaScript (Vue, Alpine, HTMX). I also handle SEO content
-          and digital marketing so your site also shows up on Google and AI chatbot recommendations.
+        <p class="my-2">Stack: PHP (Laravel/WordPress), JavaScript (Vue, Alpine, HTMX).</p>
+        <p class="mt-2">
+          I also handle SEO content and digital marketing so your site also shows up on Google and
+          AI chatbot recommendations.
         </p>
       </SectionDescription>
       <PrimaryBtnLink anchor="Say Hi!" link="#contact" class="mt-4">

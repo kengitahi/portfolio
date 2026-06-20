@@ -1,38 +1,58 @@
 export const services = [
   {
     id: 1,
-    title: 'PHP Development',
-    description: 'Have a PHP project you need completed? Have an issue with your PHP website? Need to add custom functionality or tweak your website? I can help!',
-    icon: '/icons/php.svg',
+    title: 'WordPress Development',
+    description:
+      'Custom WordPress themes and plugins built from scratch. I handle custom post types, automated workflows, booking integrations, and the SEO structure that gets your site found on Google.',
+    icon: '/icons/wordpress.svg',
   },
   {
     id: 2,
     title: 'Laravel Development',
-    description: 'I  build custom Laravel web apps for different uses cases. Whether you need a CMS, simple blog or agency website, a restaurant reservation, calendar integration, or any other custom Laravel development need, I can help!',
+    description:
+      "Custom Laravel applications for specific business needs; booking systems that don't double-book, internal dashboards, reservation tools, calendar integrations, and CMS builds tailored to how your business operates and not a generic template.",
     icon: '/icons/laravel.svg',
   },
   {
     id: 3,
-    title: 'e-commerce Development',
-    description: 'Want to build a robust e-commerce website? Need help integratng Payment options including Stripe, PayPal and M-pesa? I will build a custom e-commerce website that meets your specific needs.',
+    title: 'E-commerce Development',
+    description:
+      'E-commerce sites built around your payment reality, including Stripe, PayPal, and M-Pesa integration. I handle the main site development, checkout flow, inventory logic, and edge cases that off-the-shelf plugins tend to get wrong.',
     icon: '/icons/e-commerce.svg',
   },
   {
     id: 4,
     title: 'Front-end Development',
-    description: 'I build custom web apps using Vue.js and Next.js. Whether you need a simple blog or a complex dashboard, I can help you build a custom web app that meets your needs. I also provide fixes and feature addition services for React, Vue.js and Next.js projects.',
+    description:
+      'Interactive front-ends using Vue.js, Next.js, Alpine.js, and HTMX, from simple content sites to dashboards with live data. I also take over existing Vue, or Next.js projects that need fixes, new features, or a responsive developer.',
     icon: '',
   },
   {
     id: 5,
     title: 'API Integration',
-    description: 'Do you have an API, whether news, crypto, or from a payment processor, that you need added to your website? Let me integrate it for you!',
+    description:
+      'Integrating third-party APIs including payment processors, news feeds, crypto data, SMS/WhatsApp gateways and others into your existing site or app, so the data you need shows up exactly where your business uses it.',
     icon: '/icons/api.svg',
   },
   {
     id: 6,
     title: 'Web Design',
-    description: 'I turn Figma designs into beautiful web apps. I can turn these designs into Laravel, Vue.js, or Next.js websites.',
+    description:
+      'Figma designs turned into working websites and built in Laravel, Vue.js, or Next.js, with the spacing, interactions, and responsiveness intact, not approximated.',
     icon: '/icons/design.svg',
-  }
+  },
+  {
+    id: 7,
+    title: 'Site Maintenance & Support',
+    description:
+      'Ongoing WordPress and PHP maintenance, including security updates, broken plugin fixes, performance tuning, and a developer who answers when something breaks instead of disappearing after launch.',
+    icon: '/icons/maintenance.svg',
+  },
+  {
+    id: 8,
+    title: 'SEO & Content Strategy',
+    description:
+      'Content and technical SEO built into the site, not bolted on after launch. Handling keyword strategy, schema markup, and on-page content for industries with real compliance and trust requirements, like finance, legal, and iGaming.',
+    icon: '/icons/seo.svg',
+  },
 ]
