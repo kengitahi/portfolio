@@ -8,6 +8,9 @@ import BackToTop from '@/components/ui/BackToTop.vue'
 import SectionTitle from '@/components/typography/SectionTitle.vue'
 import SectionDescription from '@/components/typography/SectionDescription.vue'
 
+import ProjectsGallery from '@/components/ui/ProjectsGallery.vue'
+import { projects } from '@/data/projects/pos.js'
+
 import { ref } from 'vue'
 const isMenuOpen = ref(false)
 </script>
@@ -58,7 +61,13 @@ const isMenuOpen = ref(false)
           </a>
         </div>
 
-        <!-- <img src="/images/pos-hero.png" alt="POS system main sales screen" /> -->
+        <div class="flex items-center justify-center mt-8">
+          <img
+            src="/projectImages/pos/pos-home.png"
+            alt="POS system main sales screen"
+            class="w-[80%] rounded-sm border-2 border-primary"
+          />
+        </div>
       </section>
 
       <!-- Overview -->
@@ -104,25 +113,44 @@ const isMenuOpen = ref(false)
         <article class="solution-item">
           <h3>Offline-First Architecture</h3>
           <p>
-            Built on a dual-database setup — SQLite as the default local store, PostgreSQL as the
-            sync target — so the system keeps recording sales locally even when the internet is
-            down, then automatically syncs once connectivity returns. A live status widget shows
-            staff their current connection state at all times.
+            Built on a dual-database setup with SQLite as the default local store, PostgreSQL as the
+            sync target so the system keeps recording sales locally even when the internet is down,
+            then automatically syncs once connectivity returns. A live status widget shows staff
+            their current connection state.
           </p>
-          <!-- <img
-            src="/images/pos-sync-status.png"
-            alt="Sync status widget showing online/offline state"
-          /> -->
+          <div class="flex items-center justify-center mt-8">
+            <img
+              src="/projectImages/pos/online-offline.webp"
+              alt="Sync status widget showing online/offline state"
+              class="w-[80%] rounded-sm border-2 border-primary"
+            />
+          </div>
         </article>
 
         <article class="solution-item">
           <h3>Phone-Camera Stock Taking</h3>
           <p>
             Uses the browser's BarcodeDetector API, with a fallback to Html5QrcodeScanner for
-            unsupported devices, so any phone camera becomes a barcode scanner — no extra hardware
-            needed for inventory management or sales recording.
+            unsupported devices, so any phone camera becomes a barcode scanner. There's no extra
+            hardware needed for inventory management or sales recording.
           </p>
-          <!-- <img src="/images/pos-barcode-scan.png" alt="Phone camera scanning a product barcode" /> -->
+
+          <div class="flex items-center justify-center mt-8">
+            <img
+              src="/projectImages/pos/product-scanning.png"
+              alt="Phone camera scanning a product barcode"
+              class="w-[40%] rounded-sm border-2 border-primary"
+            />
+          </div>
+        </article>
+
+        <article class="solution-item">
+          <h3>Customer management</h3>
+          <p>
+            The cashier can add a customer at the time of sale. This way, the cashier can find the
+            customer then next time they visit. Also, all customer purchases and refunds are stored
+            for retrieval later.
+          </p>
         </article>
 
         <article class="solution-item">
@@ -142,12 +170,27 @@ const isMenuOpen = ref(false)
         </article>
 
         <article class="solution-item">
+          <h3>Separate manager, staff, and super admin accounts</h3>
+          <p>
+            Separate accounts for managers, staff, and super admins to ensure proper access control
+            and security. Each account type has different levels of access and permissions, and can
+            only perform specific tasks and access different parts of the system.
+          </p>
+        </article>
+
+        <article class="solution-item">
           <h3>Management Dashboard</h3>
           <p>
             Built on Django Unfold with custom routing and Chart.js visualizations, giving owners
             date-range filtering and sales insight without needing a separate analytics tool.
           </p>
-          <!-- <img src="/images/pos-dashboard.png" alt="Management dashboard with sales charts" /> -->
+          <div class="flex items-center justify-center mt-8">
+            <img
+              src="/projectImages/pos/pos-dashboard.png"
+              alt="Management dashboard with sales charts"
+              class="w-[80%] rounded-sm border-2 border-primary"
+            />
+          </div>
         </article>
       </section>
 
@@ -155,11 +198,12 @@ const isMenuOpen = ref(false)
       <section class="project-outcome">
         <SectionTitle title="Outcome" class="mb-2 mt-8"></SectionTitle>
         <p class="text-white">
-          The system is functional end-to-end — sales recording, inventory management, and reporting
-          — and built to keep working through the kind of connectivity drops that would stop a
-          typical cloud POS in its tracks. The phone-camera scanning approach also removes a cost
-          barrier that often keeps small retailers from adopting proper inventory systems in the
-          first place.
+          The system is functional end-to-end, with features including sales recording, inventory
+          management, and reporting, full customer managamanet, refunds, discounts, and much more.
+          Built to keep working through the kind of connectivity drops that would stop a typical
+          cloud POS in its tracks. The phone-camera scanning approach also removes a cost barrier
+          that often keeps small retailers from adopting proper inventory systems in the first
+          place.
         </p>
       </section>
 
@@ -167,16 +211,15 @@ const isMenuOpen = ref(false)
       <section class="project-gallery">
         <SectionTitle title="Gallery" class="mb-2 mt-8"></SectionTitle>
         <div class="gallery-grid">
-          <!-- <img src="/images/pos-gallery-1.png" alt="POS system screenshot 1" />
-          <img src="/images/pos-gallery-2.png" alt="POS system screenshot 2" />
-          <img src="/images/pos-gallery-3.png" alt="POS system screenshot 3" /> -->
+          <ProjectsGallery :slides="projects" />
         </div>
       </section>
 
       <!-- Next/Prev project navigation -->
-      <nav class="project-nav">
-        <a href="/projects/previous-project">&larr; Previous Project</a>
-        <a href="/projects/rp-consulting">R&P Consulting &rarr;</a>
+      <nav class="project-nav my-8">
+        <a href="/projects/rp-consulting" class="text-primary text-lg"
+          >Next Project: R&P Consulting Project &rarr;</a
+        >
       </nav>
 
       <FaqAccordion id="faq" />
