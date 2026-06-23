@@ -13,8 +13,8 @@ import SectionSubTitle from '@/components/typography/SectionSubtitle.vue'
 import SectionDescription from '@/components/typography/SectionDescription.vue'
 import PrimaryBtnLink from '@/components/links/PrimaryBtnLink.vue'
 
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faComments } from '@fortawesome/free-solid-svg-icons'
+import ProjectsGallery from '@/components/ui/ProjectsGallery.vue'
+import { projects } from '@/data/projects/randp.js'
 
 import { ref } from 'vue'
 const isMenuOpen = ref(false)
@@ -42,7 +42,7 @@ const isMenuOpen = ref(false)
 
         <div class="project-links flex gap-6 pt-4">
           <!-- GitHub Link -->
-          <a
+          <!-- <a
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -60,9 +60,9 @@ const isMenuOpen = ref(false)
               />
             </svg>
             View on GitHub
-          </a>
+          </a> -->
           <PrimaryBtnLink
-            href="randp-consulting.com"
+            href="http://randp-consulting.com"
             target="_blank"
             rel="noopener noreferrer"
             :anchor="liveUrlText || 'Visit Live Project'"
@@ -87,7 +87,13 @@ const isMenuOpen = ref(false)
           </PrimaryBtnLink>
         </div>
 
-        <!-- <img src="/images/rp-consulting-hero.png" alt="R&P Consulting homepage screenshot" /> -->
+        <div class="flex items-center justify-center mt-8">
+          <img
+            src="/projectImages/randp/randp-home.png"
+            alt="R&P Consulting homepage screenshot"
+            class="w-[80%] rounded-sm border-2 border-primary"
+          />
+        </div>
       </section>
 
       <!-- Overview -->
@@ -137,9 +143,23 @@ const isMenuOpen = ref(false)
           <p class="text-white">
             Built a custom Team Member post type with a <code>save_post</code> hook that
             automatically creates a linked WordPress user account whenever a new team member profile
-            is published — removing a manual admin step every time R&P hires.
+            is published, removing a manual admin step every time R&P hires.
           </p>
-          <!-- <img src="/images/rp-team-member-admin.png" alt="Team member admin screen" /> -->
+
+          <div
+            class="team-members-grid flex justify-center gap-4 flex-col md:flex-row items-center mt-8"
+          >
+            <img
+              src="/projectImages/randp/team-member-1.png"
+              alt="R&P Consulting team member addition screenshot"
+              class="w-[80%] rounded-sm border-2 border-primary"
+            />
+            <img
+              src="/projectImages/randp/team-member-2.png"
+              alt="R&P Consulting team member addition screenshot"
+              class="w-[80%] rounded-sm border-2 border-primary"
+            />
+          </div>
         </article>
 
         <article class="solution-item">
@@ -148,17 +168,31 @@ const isMenuOpen = ref(false)
             Integrated Simply Schedule Appointments with a custom popup modal, so clients can book
             consultations directly from the site without back-and-forth emails.
           </p>
-          <!-- <img src="/images/rp-booking-modal.png" alt="Appointment booking modal" /> -->
+
+          <div class="flex items-center justify-center mt-8">
+            <img
+              src="/projectImages/randp/appointment-booking.png"
+              alt="Appointment booking modal"
+              class="w-[80%] rounded-sm border-2 border-primary"
+            />
+          </div>
         </article>
 
         <article class="solution-item">
           <h3 class="text-white text-lg">Data Protection Compliance</h3>
           <p class="text-white">
             Built a custom cookie consent plugin and legal pages tailored specifically to Kenya's
-            Data Protection Act (2019) — not a generic GDPR template repurposed for a different
+            Data Protection Act (2019) not a generic GDPR template repurposed for a different
             jurisdiction. The plugin was designed to be reusable across future projects.
           </p>
-          <!-- <img src="/images/rp-cookie-consent.png" alt="Cookie consent banner" /> -->
+
+          <div class="flex items-center justify-center mt-8">
+            <img
+              src="/projectImages/randp/cookie-consent.png"
+              alt="Cookie consent banner"
+              class="w-[80%] rounded-sm border-2 border-primary"
+            />
+          </div>
         </article>
 
         <article class="solution-item">
@@ -173,11 +207,10 @@ const isMenuOpen = ref(false)
         <article class="solution-item">
           <h3 class="text-white text-lg">Fast, App-Like Interactions</h3>
           <p class="text-white">
-            Used Tailwind CSS v4, Vite, HTMX, and Alpine.js to deliver dynamic features — including
-            HTMX-powered blog category filtering and pagination — without the overhead of a full
+            Used Tailwind CSS v4, Vite, HTMX, and Alpine.js to deliver dynamic features, including
+            HTMX-powered blog category filtering and pagination, without the overhead of a full
             JavaScript framework.
           </p>
-          <!-- <img src="/images/rp-blog-filtering.png" alt="Blog category filtering interaction" /> -->
         </article>
       </section>
 
@@ -196,16 +229,15 @@ const isMenuOpen = ref(false)
       <section class="project-gallery">
         <SectionTitle title="Gallery" class="mb-2 mt-8"></SectionTitle>
         <div class="gallery-grid">
-          <!-- <img src="/images/rp-gallery-1.png" alt="R&P Consulting screenshot 1" />
-          <img src="/images/rp-gallery-2.png" alt="R&P Consulting screenshot 2" />
-          <img src="/images/rp-gallery-3.png" alt="R&P Consulting screenshot 3" /> -->
+          <ProjectsGallery :slides="projects" />
         </div>
       </section>
 
       <!-- Next/Prev project navigation -->
-      <nav class="project-nav">
-        <a href="/projects/pos-system">&larr; Retail POS System</a>
-        <a href="/projects/next-project">Next Project &rarr;</a>
+      <nav class="project-nav my-8">
+        <a href="/projects/rp-consulting" class="text-primary text-lg"
+          >Next Project: Custom Retail POS System &rarr;</a
+        >
       </nav>
 
       <FaqAccordion id="faq" />

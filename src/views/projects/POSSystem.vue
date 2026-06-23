@@ -41,7 +41,7 @@ const isMenuOpen = ref(false)
         <div class="project-links flex gap-6 pt-4">
           <!-- GitHub Link -->
           <a
-            href="#"
+            href="https://github.com/kengitahi/pos"
             target="_blank"
             rel="noopener noreferrer"
             :class="[
