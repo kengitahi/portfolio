@@ -2,11 +2,47 @@
 <template>
   <section class="pt-15">
     <SectionTitle title="Portfolio" />
-    <SectionSubtitle subtitle="Some of my past Projects" class="mb-4" />
     <!-- Portfolio Grid -->
+    <SectionSubtitle subtitle="Featured Projects" class="mb-4" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+      <div
+        v-for="project in featuredProjects"
+        :key="project.id"
+        class="relative group cursor-pointer"
+        @click="openModal(project)"
+        role="button"
+        tabindex="0"
+        @keydown.enter="openModal(project)"
+      >
+        <div class="relative overflow-hidden rounded-sm shadow-lg group">
+          <img
+            :src="project.mainImage"
+            :alt="project.title"
+            class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <PrimaryBtn
+            :label="'View Details'"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 peer hover:cursor-pointer hidden group-hover:block transition-all duration-500 ease-in-out text-ui hover:bg-primary! hover:text-ui font-semibold"
+            @click="openModal(project)"
+          />
+          <div
+            class="absolute inset-0 bg-black/10 transition-opacity duration-300 peer-hover:bg-black/80 hover:bg-black/80"
+          />
+        </div>
+        <p
+          class="mb-2 mt-4 text-center tracking-wide font-semibold text-lg md:text-xl text-silver capitalize hover:underline"
+          @click="openModal(project)"
+        >
+          {{ project.title }}
+        </p>
+      </div>
+    </div>
+
+    <SectionSubtitle subtitle="Other Projects" class="my-4" />
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
       <div
-        v-for="project in projects"
+        v-for="project in otherProjects"
         :key="project.id"
         class="relative group cursor-pointer"
         @click="openModal(project)"
@@ -118,6 +154,32 @@
                 </div>
 
                 <div class="flex items-center gap-4 mt-4 flex-col md:flex-row">
+                  <PrimaryBtnLink
+                    v-if="selectedProject.portfolioUrl"
+                    :href="selectedProject.portfolioUrl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    :link="selectedProject.portfolioUrl"
+                    :anchor="liveUrlText || 'Read Project details'"
+                    class="text-ui"
+                  >
+                    <template #icon>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </template>
+                  </PrimaryBtnLink>
                   <!-- GitHub Link -->
                   <a
                     v-if="selectedProject.githubLink"
@@ -177,11 +239,12 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
-import { projects } from '../../data/Projects'
-import PrimaryBtn from '../buttons/PrimaryBtn.vue'
-import PrimaryBtnLink from '../links/PrimaryBtnLink.vue'
-import SectionTitle from '../typography/SectionTitle.vue'
-import SectionSubtitle from '../typography/SectionSubtitle.vue'
+import { otherProjects } from '@/data/Projects'
+import { featuredProjects } from '@/data/Projects'
+import PrimaryBtn from '@/components/buttons/PrimaryBtn.vue'
+import PrimaryBtnLink from '@/components/links/PrimaryBtnLink.vue'
+import SectionTitle from '@/components/typography/SectionTitle.vue'
+import SectionSubtitle from '@/components/typography/SectionSubtitle.vue'
 
 const props = defineProps({
   modalClasses: {

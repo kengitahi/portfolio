@@ -61,7 +61,7 @@ const isMenuOpen = ref(false)
             </svg>
             View on GitHub
           </a> -->
-          <PrimaryBtnLink
+          <!-- <PrimaryBtnLink
             href="http://randp-consulting.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const isMenuOpen = ref(false)
                 />
               </svg>
             </template>
-          </PrimaryBtnLink>
+          </PrimaryBtnLink> -->
         </div>
 
         <div class="flex items-center justify-center mt-8">
@@ -101,10 +101,9 @@ const isMenuOpen = ref(false)
         <SectionTitle title="Overview" class="mb-2 mt-8"></SectionTitle>
         <p class="text-white">
           R&P Consulting is a Nairobi-based tax, accounting, and compliance firm. They needed a
-          website that went beyond describing their services — one that could handle client
-          bookings, onboard new team members without manual admin work, and meet Kenya's data
-          protection requirements, all while being fast and well-structured enough to rank locally
-          on Google.
+          website that went beyond describing their services, one that could handle client bookings,
+          onboard new team members without manual admin work, and meet Kenya's data protection
+          requirements, all while being fast and well-structured enough to rank locally on Google.
         </p>
 
         <div class="project-meta">
@@ -236,7 +235,7 @@ const isMenuOpen = ref(false)
       <!-- Next/Prev project navigation -->
       <nav class="project-nav my-8">
         <a href="/projects/rp-consulting" class="text-primary text-lg"
-          >Next Project: Custom Retail POS System &rarr;</a
+          >Next Project: Retail POS System — Offline-First Point of Sale &rarr;</a
         >
       </nav>
 
