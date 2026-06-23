@@ -138,6 +138,15 @@ const isMenuOpen = ref(false)
       <section class="project-solution">
         <SectionTitle title="The Solution" class="mb-2 mt-8"></SectionTitle>
         <article class="solution-item">
+          <h3 class="text-white text-lg">Fast, App-Like Interactions</h3>
+          <p class="text-white">
+            Used Tailwind CSS v4, Vite, HTMX, and Alpine.js to deliver dynamic features, including
+            HTMX-powered blog category filtering and pagination, without the overhead of a full
+            JavaScript framework.
+          </p>
+        </article>
+
+        <article class="solution-item">
           <h3 class="text-white text-lg">Automated Staff Onboarding</h3>
           <p class="text-white">
             Built a custom Team Member post type with a <code>save_post</code> hook that
@@ -159,6 +168,15 @@ const isMenuOpen = ref(false)
               class="w-[80%] rounded-sm border-2 border-primary"
             />
           </div>
+        </article>
+
+        <article class="solution-item">
+          <h3 class="text-white text-lg">Local SEO & Structured Data</h3>
+          <p class="text-white">
+            Implemented schema markup (AccountingService, Person, FAQPage, BreadcrumbList) sitewide
+            and on individual templates, so search engines can correctly understand and surface the
+            firm's services and team.
+          </p>
         </article>
 
         <article class="solution-item">
@@ -192,24 +210,6 @@ const isMenuOpen = ref(false)
               class="w-[80%] rounded-sm border-2 border-primary"
             />
           </div>
-        </article>
-
-        <article class="solution-item">
-          <h3 class="text-white text-lg">Local SEO & Structured Data</h3>
-          <p class="text-white">
-            Implemented schema markup (AccountingService, Person, FAQPage, BreadcrumbList) sitewide
-            and on individual templates, so search engines can correctly understand and surface the
-            firm's services and team.
-          </p>
-        </article>
-
-        <article class="solution-item">
-          <h3 class="text-white text-lg">Fast, App-Like Interactions</h3>
-          <p class="text-white">
-            Used Tailwind CSS v4, Vite, HTMX, and Alpine.js to deliver dynamic features, including
-            HTMX-powered blog category filtering and pagination, without the overhead of a full
-            JavaScript framework.
-          </p>
         </article>
       </section>
 
