@@ -234,7 +234,7 @@ const isMenuOpen = ref(false)
 
       <!-- Next/Prev project navigation -->
       <nav class="project-nav my-8">
-        <a href="/projects/rp-consulting" class="text-primary text-lg"
+        <a href="/projects/pos-system" class="text-primary text-lg"
           >Next Project: Retail POS System — Offline-First Point of Sale &rarr;</a
         >
       </nav>
